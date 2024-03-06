@@ -1,6 +1,6 @@
 {
-  "name": "@quintoandar/react-router",
-  "version": "0.0.7",
+  "name": "react-router-3",
+  "version": "0.0.8",
   "description": "React Router v3 compatible with concurrent mode",
   "files": [
     "*.md",

@@ -95,7 +95,7 @@ class Router extends Component {
   }
 
   // this method will be updated to UNSAFE_componentWillMount below for React versions >= 16.3
-  UNSAFE_componentWillMount() {
+  componentDidMount() {
     if (!this._unlisten) {
       this._unlisten = this.transitionManager.listen((error, state) => {
         if (error) {
@@ -126,8 +126,10 @@ class Router extends Component {
   }
 
   componentWillUnmount() {
-    if (this._unlisten)
+    if (this._unlisten) {
       this._unlisten()
+      this._unlisten = null
+    }
   }
 
   render() {
